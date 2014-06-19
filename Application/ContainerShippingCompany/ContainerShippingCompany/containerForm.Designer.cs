@@ -68,9 +68,9 @@
             this.pnlCompany.Controls.Add(this.button1);
             this.pnlCompany.Controls.Add(this.listBCompany);
             this.pnlCompany.Controls.Add(this.lblCompany);
-            this.pnlCompany.Location = new System.Drawing.Point(521, 0);
+            this.pnlCompany.Location = new System.Drawing.Point(498, 0);
             this.pnlCompany.Name = "pnlCompany";
-            this.pnlCompany.Size = new System.Drawing.Size(241, 493);
+            this.pnlCompany.Size = new System.Drawing.Size(264, 493);
             this.pnlCompany.TabIndex = 0;
             // 
             // lblCompany
