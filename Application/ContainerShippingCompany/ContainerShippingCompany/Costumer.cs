@@ -8,6 +8,7 @@ namespace ContainerShippingCompany
 {
     public class Costumer
     {
+        public int id;
         public string companyName;
         public string personName;
 

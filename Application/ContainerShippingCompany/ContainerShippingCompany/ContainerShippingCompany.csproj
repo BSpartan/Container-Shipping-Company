@@ -59,6 +59,12 @@
     <Compile Include="Costumer.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="DataReaderExtensions.cs" />
+    <Compile Include="deleteContainerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteContainerForm.Designer.cs">
+      <DependentUpon>deleteContainerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Destination.cs" />
     <Compile Include="Freighter.cs" />
     <Compile Include="mainForm.cs">
@@ -80,6 +86,9 @@
     <Compile Include="Settings.cs" />
     <EmbeddedResource Include="containerForm.resx">
       <DependentUpon>containerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteContainerForm.resx">
+      <DependentUpon>deleteContainerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>

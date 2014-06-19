@@ -14,7 +14,6 @@ namespace ContainerShippingCompany
     {
         private List<Costumer> costumers = new List<Costumer>();
         private Costumer costumer = new Costumer();
-        private int selectedCompanyId = 0;
         private int additionalWeight = 0;
         public containerForm()
         {
@@ -34,7 +33,7 @@ namespace ContainerShippingCompany
         private void btAddContainer_Click(object sender, EventArgs e)
         {
             //Check if all fields have input
-            if(selectedCompanyId < 1)
+            if(costumer == null)
             {
                 //show error
             }
@@ -68,6 +67,12 @@ namespace ContainerShippingCompany
             TextBox tb = new TextBox();
             tb = (TextBox)sender;
             tb.Text = "";
+        }
+
+        private void btSelectCompany_Click(object sender, EventArgs e)
+        {
+            costumer = costumers[listBCompany.SelectedIndex];
+            lblCompanySelected.Text = costumer.companyName;
         }
     }
 }

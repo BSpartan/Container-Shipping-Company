@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ContainerShippingCompany
 {
-    class ContainerType
+    public class ContainerType
     {
+        public int id;
+
     }
 }
