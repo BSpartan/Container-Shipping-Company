@@ -26,5 +26,49 @@ namespace ContainerShippingCompany.Properties
                 return defaultInstance;
             }
         }
+
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("localhost:1521")]
+        public string db_server
+        {
+            get
+            {
+                return ((string)(this["db_server"]));
+            }
+        }
+
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("LP22")]
+        public string db_user
+        {
+            get
+            {
+                return ((string)(this["db_user"]));
+            }
+        }
+
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("LP22")]
+        public string db_pass
+        {
+            get
+            {
+                return ((string)(this["db_pass"]));
+            }
+        }
+
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("xe")]
+        public string db_name
+        {
+            get
+            {
+                return ((string)(this["db_name"]));
+            }
+        }
     }
 }

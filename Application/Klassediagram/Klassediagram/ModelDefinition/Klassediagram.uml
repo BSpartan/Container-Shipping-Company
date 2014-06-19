@@ -25,6 +25,189 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="89fc6a0d-9f74-4bed-bc67-af1d23e72a64"
+            isDerived="false"
+            sourceEndRoleName="Mapping"
+            targetEndRoleName="MappingContainer"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="44a7317f-be56-43b9-b818-55fcc927eb96"
+              LastKnownName="MappingContainer"
+              LastKnownLocation="Klassediagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cf06a2e5-b9b0-4a84-b755-1db3002471b8"
+                  name="Mapping"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ae552239-bc05-40e9-85e8-26da3f56f767"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f4ae7377-e329-4613-a4c6-a327062e757e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dfb24618-c2a2-4189-aebe-5059b296289e"
+                  name="MappingContainer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5db87c1d-0fd6-45cf-b4e6-60bf601401fe"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f6378cf7-4037-47a4-b2dc-f9476feea6be"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="47def195-4983-4df0-91ef-492f9b020a96"
+            isDerived="false"
+            sourceEndRoleName="Mapping"
+            targetEndRoleName="Destination"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="94f613eb-180d-4abc-a999-311c991ee6ea"
+              LastKnownName="Destination"
+              LastKnownLocation="Klassediagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="531a36e3-01ba-4427-a0e8-f3f931073a93"
+                  name="Mapping"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f793c9ad-ec64-4e51-aaa5-9319a59da6a7"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="bfd272b3-3102-4282-b325-38d9d9ab72f7"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="77bba453-be5e-4d5d-98b5-830d90483736"
+                  name="Destination"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="0da8147f-1f52-4e31-a91b-b36ec3a65217"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="be45a120-ed07-44d2-948b-e7c7d4845e65"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7007c9f3-9efc-488f-b466-4a8411c12f24"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="Freighter"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f97e2ef3-d108-410c-aefe-eb6e33d65c4e"
+              LastKnownName="Freighter"
+              LastKnownLocation="Klassediagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7688253a-fb10-4ce9-8516-64e32255ba15"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="45086c3a-c21e-4161-8b1b-d152abd39ee8"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="746188fd-389a-4fcd-bf45-f0cea56fa0e9"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d315a297-2930-4d7c-ab27-ed90079f75ba"
+                  name="Freighter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="e5e292d3-7dbd-4f34-973c-ebdf02e1b4b9"
@@ -44,6 +227,60 @@
                 LastKnownLocation="Klassediagram.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="4c3f3046-a9e1-411b-ac5f-5efd8ae977f7"
+            name="GeneratedText"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0640d4d1-0235-40d8-84e6-b8e0fce96b10"
+                LastKnownName="string"
+                LastKnownLocation="Klassediagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0bf6e527-abec-4794-90cc-f7ca27ad531a"
+            name="destination"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="94f613eb-180d-4abc-a999-311c991ee6ea"
+                LastKnownName="Destination"
+                LastKnownLocation="Klassediagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="724b6c4b-3a98-4c84-a5dc-616d59ff7eed"
+            name="freighter"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="f97e2ef3-d108-410c-aefe-eb6e33d65c4e"
+                LastKnownName="Freighter"
+                LastKnownLocation="Klassediagram.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -56,7 +293,7 @@
             isQuery="false" />
           <operation
             Id="4c0301ca-4650-41bf-9162-3dcd6cef2493"
-            name="GetContainers"
+            name="GetAvailableContainers"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -78,6 +315,54 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="c67c3df7-81ec-4e12-8f0f-70a92e50908e"
+            name="ExportMapping"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9926e7fc-0df4-4116-a2c2-d3dedadcbadc"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="5f0999fe-d283-4570-bbaa-a75552c2ca57"
+                      LastKnownName="boolean"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="dffe7d61-fc69-4023-8565-ddbab3ab9476"
+            name="MarkMappedContainers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="82050f4a-2daa-4577-83bd-1d3684b00ea0"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="5f0999fe-d283-4570-bbaa-a75552c2ca57"
+                      LastKnownName="boolean"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -88,6 +373,112 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="e16bb739-bde2-4a52-90ce-e1cb81dba5a4"
+            isDerived="false"
+            sourceEndRoleName="Container"
+            targetEndRoleName="ContainerType"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="eff06fc9-dbf3-4e0d-a59e-bb360ca3cfd2"
+              LastKnownName="ContainerType"
+              LastKnownLocation="Klassediagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cbcbe536-259d-4390-b236-7eb30ba73365"
+                  name="Container"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a53cab20-68d2-4a90-b0d7-402ac977f47a"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="3ae821a6-0e5d-49f5-a678-2c78527d7e62"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0270d495-aecc-45cc-b572-faaaf4e8b6e0"
+                  name="ContainerType"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a56b7cac-d10b-4131-8225-72ee52b1526d"
+            isDerived="false"
+            sourceEndRoleName="Container"
+            targetEndRoleName="Costumer"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a6b8a94d-daa3-493e-a700-9ee0f15fdf35"
+              LastKnownName="Costumer"
+              LastKnownLocation="Klassediagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9d560b10-d315-4191-a710-2540961e7ebe"
+                  name="Container"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="fa5994ec-aea4-4a46-857c-331328856512"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="0a28a8ac-76ec-4a74-9fe3-e673c30261d9"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="789c8466-e933-40b8-a359-7f274004f64a"
+                  name="Costumer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="5bb2baa3-0279-4836-b84c-52ddc31d5c2e"
@@ -235,7 +626,20 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="de2f419d-f176-47be-99c7-65497ca40f6c"
+                  Id="5f333475-82e7-457f-875d-ea58ee2be5cf"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="5f0999fe-d283-4570-bbaa-a75552c2ca57"
+                      LastKnownName="boolean"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="00733150-51ec-44af-8b15-0c0acf01041a"
                   name="weight"
                   direction="In"
                   isUnique="false">
@@ -249,35 +653,35 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="e2c24a9e-a56f-4c5d-af04-9b440d09957b"
-                  name="costumer_id"
+                  Id="d583646d-fe7e-43f7-81aa-fdbe2d89f35d"
+                  name="costumer"
                   direction="In"
                   isUnique="false">
                   <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="fc772db8-c910-4a68-9714-3bf46f3ad8d5"
-                      LastKnownName="int"
+                    <classMoniker
+                      Id="a6b8a94d-daa3-493e-a700-9ee0f15fdf35"
+                      LastKnownName="Costumer"
                       LastKnownLocation="Klassediagram.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="593b4a1f-10f6-40ec-919f-e2e13cc6af86"
-                  name="type_id"
+                  Id="ddf10d72-5d41-456c-b702-ec82faa88602"
+                  name="type"
                   direction="In"
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="fc772db8-c910-4a68-9714-3bf46f3ad8d5"
-                      LastKnownName="int"
+                      Id="0c6d153d-26d9-4ff5-b4ee-5e745146c957"
+                      LastKnownName="containerType"
                       LastKnownLocation="Klassediagram.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="4938433c-ef3b-4ffc-b75a-582ab4cb665a"
+                  Id="ca270827-4692-41a4-a9be-fe45d77cb7c7"
                   name="gpscode"
                   direction="In"
                   isUnique="false">
@@ -285,33 +689,6 @@
                     <undefinedTypeMoniker
                       Id="0640d4d1-0235-40d8-84e6-b8e0fce96b10"
                       LastKnownName="string"
-                      LastKnownLocation="Klassediagram.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="1bdabf05-ac6b-44b8-8b49-53ff1acb197d"
-                  name="status"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="0640d4d1-0235-40d8-84e6-b8e0fce96b10"
-                      LastKnownName="string"
-                      LastKnownLocation="Klassediagram.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="5f333475-82e7-457f-875d-ea58ee2be5cf"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="5f0999fe-d283-4570-bbaa-a75552c2ca57"
-                      LastKnownName="boolean"
                       LastKnownLocation="Klassediagram.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -350,6 +727,96 @@
                     <undefinedTypeMoniker
                       Id="5f0999fe-d283-4570-bbaa-a75552c2ca57"
                       LastKnownName="boolean"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="45ad904e-7da6-40d8-9264-33d0340ed1f4"
+            name="GetNonShippedContainersList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0fe76b73-615f-45e5-8702-c5007e0ec317"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="d940fe0f-f5a0-4d36-8677-541fa57a7dfc"
+                      LastKnownName="List&lt;Containers&gt;"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="47adc9aa-4936-4883-854e-72c5e7006c17"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="97e8b2e3-4661-417f-9855-4d455257dfdf"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="5f0999fe-d283-4570-bbaa-a75552c2ca57"
+                      LastKnownName="boolean"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d55537a7-6dfe-4869-90c6-ddf01575c208"
+                  name="weight"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="fc772db8-c910-4a68-9714-3bf46f3ad8d5"
+                      LastKnownName="int"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ab9253e4-40f1-4cbc-b102-45dba37cb410"
+                  name="costumer"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a6b8a94d-daa3-493e-a700-9ee0f15fdf35"
+                      LastKnownName="Costumer"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4e99ed6a-4c8f-4a25-b8cf-9a2aa102eadc"
+                  name="type"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0c6d153d-26d9-4ff5-b4ee-5e745146c957"
+                      LastKnownName="containerType"
                       LastKnownLocation="Klassediagram.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -458,6 +925,46 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="08d09353-149f-478c-90d6-7325fc24d907"
+            name="GetFreighterById"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0e58523c-9eda-4419-a780-bf293013f6ea"
+                  name="id"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="fc772db8-c910-4a68-9714-3bf46f3ad8d5"
+                      LastKnownName="int"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d188bc48-2978-4968-a220-9dadc571c6b8"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="f97e2ef3-d108-410c-aefe-eb6e33d65c4e"
+                      LastKnownName="Freighter"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -491,6 +998,46 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f59fd110-01fb-4bc9-a565-2bced9288ed5"
+            name="GetDestinationById"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fd420559-9365-4d15-b873-174cfcb7e36a"
+                  name="id"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="fc772db8-c910-4a68-9714-3bf46f3ad8d5"
+                      LastKnownName="int"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f4f3b0cf-60e5-4695-a1b9-a027e49169b2"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="94f613eb-180d-4abc-a999-311c991ee6ea"
+                      LastKnownName="Destination"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -595,7 +1142,7 @@
         <ownedOperationsInternal>
           <operation
             Id="154f01c8-f96b-452c-b1f8-c4c907474357"
-            name="SearchCompanyByName"
+            name="SearchCompanysByName"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -604,7 +1151,20 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="de22babe-3352-4ffd-911e-445c7c1145dd"
+                  Id="33adea25-9321-4b80-a02f-bbda356345f2"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e46b7609-225c-4457-9fac-78a40b48183b"
+                      LastKnownName="List&lt;Costumer&gt;"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="974fef9c-1547-4501-833d-c67ca0049dd0"
                   name="name"
                   direction="In"
                   isUnique="false">
@@ -612,19 +1172,6 @@
                     <undefinedTypeMoniker
                       Id="0640d4d1-0235-40d8-84e6-b8e0fce96b10"
                       LastKnownName="string"
-                      LastKnownLocation="Klassediagram.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="33adea25-9321-4b80-a02f-bbda356345f2"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="a6b8a94d-daa3-493e-a700-9ee0f15fdf35"
-                      LastKnownName="Costumer"
                       LastKnownLocation="Klassediagram.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -743,6 +1290,30 @@
                     <undefinedTypeMoniker
                       Id="fc772db8-c910-4a68-9714-3bf46f3ad8d5"
                       LastKnownName="int"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1ce496a3-370f-4f11-a0ba-fc0332544550"
+            name="GetAllCostumers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a1119cc8-a955-45e2-9580-b0356ee0ccc3"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="7b064e98-e9c5-4969-9304-52bb98694d46"
+                      LastKnownName="List&lt;Costumers&gt;"
                       LastKnownLocation="Klassediagram.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -888,6 +1459,73 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="a930424a-9b75-4994-ba03-caece8240800"
+            isDerived="false"
+            sourceEndRoleName="MappingContainer"
+            targetEndRoleName="Container"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7a4fc523-11ef-43ae-8431-63b1bdd714d3"
+              LastKnownName="Container"
+              LastKnownLocation="Klassediagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bc33a742-a86e-46b5-b619-36d608828008"
+                  name="MappingContainer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a5d572df-1c20-4bc4-a8f8-e2365d2296c2"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c79f6d57-4e83-4beb-b8c8-6b3d1fcd33d9"
+                      name="Upper"
+                      value="0" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5e3a0b78-56ea-492f-9828-e7200e3d608a"
+                  name="Container"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c305ebe1-fe08-46cc-9a3b-9e5e84eeaef9"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6aad8d7f-b2ad-48a7-945e-a323e68449a4"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="f360bb16-07d2-4935-b9c9-5f4b4ee2e851"
@@ -968,6 +1606,245 @@
       <undefinedType
         Id="c1bcad31-bfb3-44d9-bdfa-65cd9ccfc7e0"
         name="List&lt;MappingContainer&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="d940fe0f-f5a0-4d36-8677-541fa57a7dfc"
+        name="List&lt;Containers&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cb0f71d3-069b-46ca-bc6b-63194e80ef3e"
+        name="Database"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="ffcb6d8a-8421-41f7-9f5d-543ad0f5a677"
+            name="conn"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="6cb5d2aa-c641-41b9-b103-a9d3b8fe7438"
+                LastKnownName="OracleConnection"
+                LastKnownLocation="Klassediagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="cd2aa7ee-9b6b-4c3c-a9c0-458f53af80d5"
+            name="cmd"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ed7e4897-de37-4f58-9d68-745f763ca69b"
+                LastKnownName="OracleCommand"
+                LastKnownLocation="Klassediagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="423f4f6d-6eed-4d53-be12-67c5320da552"
+            name="dataReader"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0c438c20-3965-4964-8fb8-7338514df667"
+                LastKnownName="OracleDataReader"
+                LastKnownLocation="Klassediagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5491ae5c-7fc4-484e-b90f-fb5b2331b937"
+            name="DataReader"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0c438c20-3965-4964-8fb8-7338514df667"
+                LastKnownName="OracleDataReader"
+                LastKnownLocation="Klassediagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="db04ef6b-ab94-4fd8-a58c-6e21c9e78ab0"
+            name="Database"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a24ab2f1-6d8e-4907-8adf-c2d9dedb5c55"
+            name="OpenConnection"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7f4cd882-b1c6-41df-9c42-c422804b0cc9"
+            name="CloseConnection"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0a227ff4-8fb1-41f3-8fc3-92958d76848b"
+            name="CreateCommand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b2ccfdfe-b1b6-4111-af3f-bb529c6ef59a"
+                  name="commandText"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0640d4d1-0235-40d8-84e6-b8e0fce96b10"
+                      LastKnownName="string"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="546cfb67-8a31-47d1-bb5d-a00effb1d7c4"
+            name="AddParameter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="08dc2889-45ab-4239-b2e6-c4ff53c0d95a"
+                  name="parameterName"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0640d4d1-0235-40d8-84e6-b8e0fce96b10"
+                      LastKnownName="string"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b1419cdd-87d6-4202-8657-336c0e1dd8f8"
+                  name="value"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e27f01b1-f090-4333-9b55-f3d2e96633dd"
+                      LastKnownName="object"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f6efb57a-90de-416b-ab32-fc73eb9fd756"
+            name="ExcecuteCommand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="41611560-6032-4888-a770-f24a1de83320"
+        name="OracleConnectionString" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6cb5d2aa-c641-41b9-b103-a9d3b8fe7438"
+        name="OracleConnection" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ed7e4897-de37-4f58-9d68-745f763ca69b"
+        name="OracleCommand" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0c438c20-3965-4964-8fb8-7338514df667"
+        name="OracleDataReader" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="4c98dd1a-d059-4a41-8865-9918f2e52e74"
+        name="string)" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="b44e1d18-8e63-4586-a4de-2e5e03dc5765"
+        name="object)" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="e27f01b1-f090-4333-9b55-f3d2e96633dd"
+        name="object" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7b064e98-e9c5-4969-9304-52bb98694d46"
+        name="List&lt;Costumers&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="e46b7609-225c-4457-9fac-78a40b48183b"
+        name="List&lt;Costumer&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0c6d153d-26d9-4ff5-b4ee-5e745146c957"
+        name="containerType" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

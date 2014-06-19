@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(containerForm));
             this.pnlCompany = new System.Windows.Forms.Panel();
-            this.lblCompany = new System.Windows.Forms.Label();
-            this.listBCompany = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tbSearch = new System.Windows.Forms.TextBox();
-            this.lblNewCompany = new System.Windows.Forms.Label();
-            this.tbCompanyName = new System.Windows.Forms.TextBox();
-            this.tbContactPerson = new System.Windows.Forms.TextBox();
-            this.tbCompanyKvk = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.cbMotherCompany = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tbCompanyKvk = new System.Windows.Forms.TextBox();
+            this.tbContactPerson = new System.Windows.Forms.TextBox();
+            this.tbCompanyName = new System.Windows.Forms.TextBox();
+            this.lblNewCompany = new System.Windows.Forms.Label();
+            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.listBCompany = new System.Windows.Forms.ListBox();
+            this.lblCompany = new System.Windows.Forms.Label();
             this.lblAddContainers = new System.Windows.Forms.Label();
             this.lblType = new System.Windows.Forms.Label();
             this.cbType = new System.Windows.Forms.ComboBox();
@@ -73,41 +73,47 @@
             this.pnlCompany.Size = new System.Drawing.Size(264, 493);
             this.pnlCompany.TabIndex = 0;
             // 
-            // lblCompany
+            // cbMotherCompany
             // 
-            this.lblCompany.AutoSize = true;
-            this.lblCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompany.Location = new System.Drawing.Point(21, 12);
-            this.lblCompany.Name = "lblCompany";
-            this.lblCompany.Size = new System.Drawing.Size(62, 24);
-            this.lblCompany.TabIndex = 0;
-            this.lblCompany.Text = "Bedrijf";
+            this.cbMotherCompany.FormattingEnabled = true;
+            this.cbMotherCompany.Location = new System.Drawing.Point(25, 410);
+            this.cbMotherCompany.Name = "cbMotherCompany";
+            this.cbMotherCompany.Size = new System.Drawing.Size(203, 24);
+            this.cbMotherCompany.TabIndex = 9;
+            this.cbMotherCompany.Text = "Moeder bedrijf";
             // 
-            // listBCompany
+            // button2
             // 
-            this.listBCompany.FormattingEnabled = true;
-            this.listBCompany.ItemHeight = 16;
-            this.listBCompany.Location = new System.Drawing.Point(25, 96);
-            this.listBCompany.Name = "listBCompany";
-            this.listBCompany.Size = new System.Drawing.Size(203, 132);
-            this.listBCompany.TabIndex = 1;
+            this.button2.Location = new System.Drawing.Point(111, 440);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(117, 27);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Toevoegen";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // tbCompanyKvk
             // 
-            this.button1.Location = new System.Drawing.Point(138, 234);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 27);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Selecteer";
-            this.button1.UseVisualStyleBackColor = true;
+            this.tbCompanyKvk.Location = new System.Drawing.Point(25, 381);
+            this.tbCompanyKvk.Name = "tbCompanyKvk";
+            this.tbCompanyKvk.Size = new System.Drawing.Size(203, 22);
+            this.tbCompanyKvk.TabIndex = 7;
+            this.tbCompanyKvk.Text = "Kvk nummer";
             // 
-            // tbSearch
+            // tbContactPerson
             // 
-            this.tbSearch.Location = new System.Drawing.Point(25, 54);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(203, 22);
-            this.tbSearch.TabIndex = 3;
-            this.tbSearch.Text = "Zoeken..";
+            this.tbContactPerson.Location = new System.Drawing.Point(25, 353);
+            this.tbContactPerson.Name = "tbContactPerson";
+            this.tbContactPerson.Size = new System.Drawing.Size(203, 22);
+            this.tbContactPerson.TabIndex = 6;
+            this.tbContactPerson.Text = "Contact persoon";
+            // 
+            // tbCompanyName
+            // 
+            this.tbCompanyName.Location = new System.Drawing.Point(25, 325);
+            this.tbCompanyName.Name = "tbCompanyName";
+            this.tbCompanyName.Size = new System.Drawing.Size(203, 22);
+            this.tbCompanyName.TabIndex = 5;
+            this.tbCompanyName.Text = "Bedrijfsnaam";
             // 
             // lblNewCompany
             // 
@@ -119,47 +125,41 @@
             this.lblNewCompany.TabIndex = 4;
             this.lblNewCompany.Text = "Nieuw bedrijf";
             // 
-            // tbCompanyName
+            // tbSearch
             // 
-            this.tbCompanyName.Location = new System.Drawing.Point(25, 325);
-            this.tbCompanyName.Name = "tbCompanyName";
-            this.tbCompanyName.Size = new System.Drawing.Size(203, 22);
-            this.tbCompanyName.TabIndex = 5;
-            this.tbCompanyName.Text = "Bedrijfsnaam";
+            this.tbSearch.Location = new System.Drawing.Point(25, 54);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(203, 22);
+            this.tbSearch.TabIndex = 3;
+            this.tbSearch.Text = "Zoeken..";
             // 
-            // tbContactPerson
+            // button1
             // 
-            this.tbContactPerson.Location = new System.Drawing.Point(25, 353);
-            this.tbContactPerson.Name = "tbContactPerson";
-            this.tbContactPerson.Size = new System.Drawing.Size(203, 22);
-            this.tbContactPerson.TabIndex = 6;
-            this.tbContactPerson.Text = "Contact persoon";
+            this.button1.Location = new System.Drawing.Point(138, 234);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 27);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Selecteer";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // tbCompanyKvk
+            // listBCompany
             // 
-            this.tbCompanyKvk.Location = new System.Drawing.Point(25, 381);
-            this.tbCompanyKvk.Name = "tbCompanyKvk";
-            this.tbCompanyKvk.Size = new System.Drawing.Size(203, 22);
-            this.tbCompanyKvk.TabIndex = 7;
-            this.tbCompanyKvk.Text = "Kvk nummer";
+            this.listBCompany.FormattingEnabled = true;
+            this.listBCompany.ItemHeight = 16;
+            this.listBCompany.Location = new System.Drawing.Point(25, 96);
+            this.listBCompany.Name = "listBCompany";
+            this.listBCompany.Size = new System.Drawing.Size(203, 132);
+            this.listBCompany.TabIndex = 1;
             // 
-            // button2
+            // lblCompany
             // 
-            this.button2.Location = new System.Drawing.Point(138, 440);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 27);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Toevoegen";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // cbMotherCompany
-            // 
-            this.cbMotherCompany.FormattingEnabled = true;
-            this.cbMotherCompany.Location = new System.Drawing.Point(25, 410);
-            this.cbMotherCompany.Name = "cbMotherCompany";
-            this.cbMotherCompany.Size = new System.Drawing.Size(203, 24);
-            this.cbMotherCompany.TabIndex = 9;
-            this.cbMotherCompany.Text = "Moeder bedrijf";
+            this.lblCompany.AutoSize = true;
+            this.lblCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompany.Location = new System.Drawing.Point(21, 12);
+            this.lblCompany.Name = "lblCompany";
+            this.lblCompany.Size = new System.Drawing.Size(62, 24);
+            this.lblCompany.TabIndex = 0;
+            this.lblCompany.Text = "Bedrijf";
             // 
             // lblAddContainers
             // 
@@ -227,12 +227,13 @@
             // 
             // btAddContainer
             // 
-            this.btAddContainer.Location = new System.Drawing.Point(224, 257);
+            this.btAddContainer.Location = new System.Drawing.Point(203, 257);
             this.btAddContainer.Name = "btAddContainer";
-            this.btAddContainer.Size = new System.Drawing.Size(90, 27);
+            this.btAddContainer.Size = new System.Drawing.Size(111, 27);
             this.btAddContainer.TabIndex = 10;
             this.btAddContainer.Text = "Toevoegen";
             this.btAddContainer.UseVisualStyleBackColor = true;
+            this.btAddContainer.Click += new System.EventHandler(this.btAddContainer_Click);
             // 
             // lblComanyLabel
             // 
@@ -248,9 +249,8 @@
             this.lblCompanySelected.AutoSize = true;
             this.lblCompanySelected.Location = new System.Drawing.Point(111, 64);
             this.lblCompanySelected.Name = "lblCompanySelected";
-            this.lblCompanySelected.Size = new System.Drawing.Size(182, 17);
+            this.lblCompanySelected.Size = new System.Drawing.Size(0, 17);
             this.lblCompanySelected.TabIndex = 19;
-            this.lblCompanySelected.Text = "COMPANY PLACEHOLDER";
             // 
             // containerForm
             // 

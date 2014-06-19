@@ -21,12 +21,14 @@ namespace ContainerShippingCompany
         {
             containerForm cf = new containerForm();
             cf.Show();
+            this.Hide();
         }
 
         private void btnNewMapping_Click(object sender, EventArgs e)
         {
             mappingForm mf = new mappingForm();
             mf.Show();
+            this.Hide();
         }
     }
 }
