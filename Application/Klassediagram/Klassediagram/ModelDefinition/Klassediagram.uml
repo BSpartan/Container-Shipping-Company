@@ -964,6 +964,30 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="88399d8d-f491-42b6-8b3f-25bf7cf72581"
+            name="GetAllFreighters"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a9feff9e-73ec-4bc5-be40-bc35090f8cd3"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="545f20e4-045a-4ed5-a943-97e0f32d93bc"
+                      LastKnownName="List&lt;Freighter&gt;"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1031,6 +1055,30 @@
                     <classMoniker
                       Id="94f613eb-180d-4abc-a999-311c991ee6ea"
                       LastKnownName="Destination"
+                      LastKnownLocation="Klassediagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d7b66bcd-e11f-445d-992a-7ccc2cc00481"
+            name="GetAllDestinations"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3b81dd9e-60ea-420c-81f1-203124ee49b7"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a60074e9-f5be-45a9-bbed-b306d3332fb2"
+                      LastKnownName="List&lt;Destination&gt;"
                       LastKnownLocation="Klassediagram.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -1845,6 +1893,16 @@
       <undefinedType
         Id="0c6d153d-26d9-4ff5-b4ee-5e745146c957"
         name="containerType" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a60074e9-f5be-45a9-bbed-b306d3332fb2"
+        name="List&lt;Destination&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="545f20e4-045a-4ed5-a943-97e0f32d93bc"
+        name="List&lt;Freighter&gt;" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

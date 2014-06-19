@@ -12,11 +12,23 @@ namespace ContainerShippingCompany
 {
     public partial class containerForm : Form
     {
+        private List<Costumer> costumers = new List<Costumer>();
+        private Costumer costumer = new Costumer();
         private int selectedCompanyId = 0;
         private int additionalWeight = 0;
         public containerForm()
         {
             InitializeComponent();
+            FillCompanyList();
+        }
+
+        private void FillCompanyList()
+        {
+            costumers = costumer.GetAllCostumers();
+            foreach (Costumer c in costumers)
+            {
+                listBCompany.Items.Add(c.companyName);
+            }
         }
 
         private void btAddContainer_Click(object sender, EventArgs e)
@@ -49,6 +61,13 @@ namespace ContainerShippingCompany
             
 
 
+        }
+
+        private void TextBox_Enter(object sender, EventArgs e)
+        {
+            TextBox tb = new TextBox();
+            tb = (TextBox)sender;
+            tb.Text = "";
         }
     }
 }

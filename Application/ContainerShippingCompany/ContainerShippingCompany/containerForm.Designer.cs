@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(containerForm));
             this.pnlCompany = new System.Windows.Forms.Panel();
             this.cbMotherCompany = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AddCompany = new System.Windows.Forms.Button();
             this.tbCompanyKvk = new System.Windows.Forms.TextBox();
             this.tbContactPerson = new System.Windows.Forms.TextBox();
             this.tbCompanyName = new System.Windows.Forms.TextBox();
@@ -59,7 +59,7 @@
             this.pnlCompany.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pnlCompany.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlCompany.Controls.Add(this.cbMotherCompany);
-            this.pnlCompany.Controls.Add(this.button2);
+            this.pnlCompany.Controls.Add(this.AddCompany);
             this.pnlCompany.Controls.Add(this.tbCompanyKvk);
             this.pnlCompany.Controls.Add(this.tbContactPerson);
             this.pnlCompany.Controls.Add(this.tbCompanyName);
@@ -82,14 +82,14 @@
             this.cbMotherCompany.TabIndex = 9;
             this.cbMotherCompany.Text = "Moeder bedrijf";
             // 
-            // button2
+            // AddCompany
             // 
-            this.button2.Location = new System.Drawing.Point(111, 440);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 27);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Toevoegen";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AddCompany.Location = new System.Drawing.Point(111, 440);
+            this.AddCompany.Name = "AddCompany";
+            this.AddCompany.Size = new System.Drawing.Size(117, 27);
+            this.AddCompany.TabIndex = 8;
+            this.AddCompany.Text = "Toevoegen";
+            this.AddCompany.UseVisualStyleBackColor = true;
             // 
             // tbCompanyKvk
             // 
@@ -98,6 +98,7 @@
             this.tbCompanyKvk.Size = new System.Drawing.Size(203, 22);
             this.tbCompanyKvk.TabIndex = 7;
             this.tbCompanyKvk.Text = "Kvk nummer";
+            this.tbCompanyKvk.Enter += new System.EventHandler(this.TextBox_Enter);
             // 
             // tbContactPerson
             // 
@@ -106,6 +107,7 @@
             this.tbContactPerson.Size = new System.Drawing.Size(203, 22);
             this.tbContactPerson.TabIndex = 6;
             this.tbContactPerson.Text = "Contact persoon";
+            this.tbContactPerson.Enter += new System.EventHandler(this.TextBox_Enter);
             // 
             // tbCompanyName
             // 
@@ -114,6 +116,7 @@
             this.tbCompanyName.Size = new System.Drawing.Size(203, 22);
             this.tbCompanyName.TabIndex = 5;
             this.tbCompanyName.Text = "Bedrijfsnaam";
+            this.tbCompanyName.Enter += new System.EventHandler(this.TextBox_Enter);
             // 
             // lblNewCompany
             // 
@@ -286,7 +289,7 @@
 
         private System.Windows.Forms.Panel pnlCompany;
         private System.Windows.Forms.ComboBox cbMotherCompany;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AddCompany;
         private System.Windows.Forms.TextBox tbCompanyKvk;
         private System.Windows.Forms.TextBox tbContactPerson;
         private System.Windows.Forms.TextBox tbCompanyName;

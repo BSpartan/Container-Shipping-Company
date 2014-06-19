@@ -15,6 +15,12 @@ namespace ContainerShippingCompany
         public mappingForm()
         {
             InitializeComponent();
+            WriteLegenda();
+        }
+
+        private void WriteLegenda()
+        {
+            rtbLegenda.Text = "\n\n _ = lege positie \n C = normale container\n V = waardevolle container \n E = actief gekoelde container";
         }
     }
 }

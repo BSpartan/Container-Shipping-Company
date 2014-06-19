@@ -461,6 +461,19 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation Id="239743fb-c945-4b90-b1a8-63cb3cfc3174" name="GetAllFreighters" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="88399d8d-f491-42b6-8b3f-25bf7cf72581" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="713cd767-9dd8-4acc-a747-86c49cc254b2" direction="Return" isUnique="false">
+                  <elementDefinition Id="a9feff9e-73ec-4bc5-be40-bc35090f8cd3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e1a804df-797b-492b-81fb-863a7815263b" LastKnownName="List&lt;Freighter&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -492,6 +505,19 @@
                   <elementDefinition Id="f4f3b0cf-60e5-4695-a1b9-a027e49169b2" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="e84c9c46-773e-447d-a6dc-d4859a93918b" LastKnownName="Destination" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="7cf6c0c8-b3c2-473a-a138-6e3351f6b67c" name="GetAllDestinations" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d7b66bcd-e11f-445d-992a-7ccc2cc00481" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b30323c8-d799-4d79-8b54-944867e2b5b4" direction="Return" isUnique="false">
+                  <elementDefinition Id="3b81dd9e-60ea-420c-81f1-203124ee49b7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d6fd39a0-6ea2-45d9-8c95-e5b3ab15f883" LastKnownName="List&lt;Destination&gt;" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -910,6 +936,16 @@
     <packageHasNamedElement>
       <referencedType Id="39012f19-4e4d-445b-9529-8b8204220ca0" name="containerType" isAbstract="false" isLeaf="false" cachedFullName="containerType">
         <elementDefinition Id="0c6d153d-26d9-4ff5-b4ee-5e745146c957" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d6fd39a0-6ea2-45d9-8c95-e5b3ab15f883" name="List&lt;Destination&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;Destination&gt;">
+        <elementDefinition Id="a60074e9-f5be-45a9-bbed-b306d3332fb2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e1a804df-797b-492b-81fb-863a7815263b" name="List&lt;Freighter&gt;" isAbstract="false" isLeaf="false" cachedFullName="List&lt;Freighter&gt;">
+        <elementDefinition Id="545f20e4-045a-4ed5-a943-97e0f32d93bc" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
