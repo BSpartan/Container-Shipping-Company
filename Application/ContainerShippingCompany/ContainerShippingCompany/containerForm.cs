@@ -14,9 +14,13 @@ namespace ContainerShippingCompany
     {
         private List<Costumer> costumers = new List<Costumer>();
         private List<ContainerType> containerTypes = new List<ContainerType>();
+        private List<Destination> destinations = new List<Destination>();
         private Costumer costumer = new Costumer();
         private ContainerType containerType = new ContainerType();
+        private Destination destination = new Destination();
         private int additionalWeight = 0;
+
+
         public containerForm()
         {
             InitializeComponent();
@@ -24,6 +28,7 @@ namespace ContainerShippingCompany
             FillTypeList();
         }
 
+        //Fill the company list with values
         private void FillCompanyList()
         {
             listBCompany.Items.Clear();
@@ -36,17 +41,26 @@ namespace ContainerShippingCompany
             }
         }
 
+        //Fill the comboboxes with values
         private void FillTypeList()
         {
             cbType.Items.Clear();
+            cbDestination.Items.Clear();
+
+            destinations = Destination.GetAll();
+            foreach (Destination DN in destinations)
+            {
+                cbDestination.Items.Add(DN.name);
+            }
+
             containerTypes = ContainerType.GetAll();
             foreach (ContainerType CT in containerTypes)
             {
                 cbType.Items.Add(CT.name);
-                //listBCompany.Items.Add(c.companyName);
             }
         }
 
+        //Add container to the database
         private void btAddContainer_Click(object sender, EventArgs e)
         {
             Container container = new Container();
@@ -60,13 +74,21 @@ namespace ContainerShippingCompany
                 error += "Geen bedrijf geselecteerd \n";
             }
 
+            //Check if a type or destination is selected
             containerType = containerTypes[cbType.SelectedIndex];
+            destination = destinations[cbDestination.SelectedIndex];
 
             if(containerType.id == 0)
             {
                 error += "Geen type geselecteerd \n"; 
             }
+
+            if (destination.id == 0)
+            {
+                error += "Geen bestemming geselecteerd \n";
+            }
             
+            //check if weight is a number
             try
             {
                 additionalWeight = Convert.ToInt16(NUPWeight.Value);
@@ -76,6 +98,7 @@ namespace ContainerShippingCompany
                 error += "Geen correct gewicht nummer \n";
             }
 
+            //check if weight is not 0
             if (additionalWeight < 1)
             {
                 error += "Gewicht mag niet nul zijn \n";
@@ -85,19 +108,24 @@ namespace ContainerShippingCompany
 
             //DEBUG
             //if (error != string.Empty)
+
+            //If there are no errors add the container to the database
             if (error == string.Empty)
             {
+                //In case of database failure check result
+                bool succes = container.Add(costumer, containerType, destination, additionalWeight);
 
-                bool succes = container.Add(costumer, containerType, additionalWeight);
-
+                //if succes empty form
                 if (succes)
                 {
                     lbError.Text = string.Empty;
                     NUPWeight.Value = 0;
                     cbType.SelectedIndex = -1;
+                    cbDestination.SelectedIndex = -1;
                 }
                 else
                 {
+                    //Show errors
                     error += "Er is iets fout gegaan bij het wegschijven";
                     lbError.Text = error;
                 }
@@ -105,6 +133,7 @@ namespace ContainerShippingCompany
             }
             else
             {
+                //Show errors
                 lbError.Text = error;
             }
 
@@ -114,6 +143,7 @@ namespace ContainerShippingCompany
 
         }
 
+        //On textbox focus remove current value
         private void TextBox_Enter(object sender, EventArgs e)
         {
             TextBox tb = new TextBox();
@@ -121,6 +151,7 @@ namespace ContainerShippingCompany
             tb.Text = "";
         }
 
+        //When a company is selected add the company to the object and show values
         private void btSelectCompany_Click(object sender, EventArgs e)
         {
             costumer = costumers[listBCompany.SelectedIndex];
@@ -129,19 +160,23 @@ namespace ContainerShippingCompany
             btDeleteContainers.Visible = Visible;
         }
 
+        //Add a new company to the database
         private void btAddCompany_Click(object sender, EventArgs e)
         {
+            //Error checking
             lblErrorCompany.Text = string.Empty;
             int kvk = 0;
             bool error = false;
             Costumer costumer = new Costumer();
 
+            //Check if input fields are empty
             if (tbCompanyName.Text == string.Empty)
                 error = true;
 
             if (tbContactPerson.Text == string.Empty)
                 error = true;
 
+            //Check if empty if not check if its a number, continue if it is
             if (tbCompanyKvk.Text == string.Empty)
             {
                 error = true;
@@ -164,12 +199,14 @@ namespace ContainerShippingCompany
             }
 
 
-
+            //If there are no error add to database
             if(error != true)
             {
+                //Check result in case of database failure
                 costumer = costumers[cbMotherCompany.SelectedIndex];
                 bool succes = costumer.Add(costumer, tbCompanyName.Text, tbContactPerson.Text, kvk);
 
+                //if succes refresh company list
                 if (!succes)
                     lblErrorCompany.Text = "Er is iets fout gegaan bij het wegschrijven";
                 else
@@ -177,12 +214,14 @@ namespace ContainerShippingCompany
             }
             else
             {
+                //show error
                 lblErrorCompany.Text = "Controleer de gegevens";
             }
 
 
         }
 
+        //Open delete container form with correct costumer
         private void btDeleteContainers_Click(object sender, EventArgs e)
         {
             deleteContainerForm dcf = new deleteContainerForm(costumer);

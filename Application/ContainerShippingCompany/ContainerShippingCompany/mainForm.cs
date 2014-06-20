@@ -17,12 +17,14 @@ namespace ContainerShippingCompany
             InitializeComponent();
         }
 
+        //Show form
         private void btnNewContainers_Click(object sender, EventArgs e)
         {
             containerForm cf = new containerForm();
             cf.Show();
         }
 
+        //Show form
         private void btnNewMapping_Click(object sender, EventArgs e)
         {
             mappingForm mf = new mappingForm();

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(containerForm));
             this.pnlCompany = new System.Windows.Forms.Panel();
+            this.lblErrorCompany = new System.Windows.Forms.Label();
             this.btDeleteContainers = new System.Windows.Forms.Button();
             this.cbMotherCompany = new System.Windows.Forms.ComboBox();
             this.btAddCompany = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.tbContactPerson = new System.Windows.Forms.TextBox();
             this.tbCompanyName = new System.Windows.Forms.TextBox();
             this.lblNewCompany = new System.Windows.Forms.Label();
-            this.tbSearch = new System.Windows.Forms.TextBox();
             this.btSelectCompany = new System.Windows.Forms.Button();
             this.listBCompany = new System.Windows.Forms.ListBox();
             this.lblCompany = new System.Windows.Forms.Label();
@@ -52,7 +52,8 @@
             this.lblComanyLabel = new System.Windows.Forms.Label();
             this.lblCompanySelected = new System.Windows.Forms.Label();
             this.lbError = new System.Windows.Forms.Label();
-            this.lblErrorCompany = new System.Windows.Forms.Label();
+            this.cbDestination = new System.Windows.Forms.ComboBox();
+            this.lbDestination = new System.Windows.Forms.Label();
             this.pnlCompany.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUPWeight)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +70,6 @@
             this.pnlCompany.Controls.Add(this.tbContactPerson);
             this.pnlCompany.Controls.Add(this.tbCompanyName);
             this.pnlCompany.Controls.Add(this.lblNewCompany);
-            this.pnlCompany.Controls.Add(this.tbSearch);
             this.pnlCompany.Controls.Add(this.btSelectCompany);
             this.pnlCompany.Controls.Add(this.listBCompany);
             this.pnlCompany.Controls.Add(this.lblCompany);
@@ -79,9 +79,20 @@
             this.pnlCompany.Size = new System.Drawing.Size(263, 500);
             this.pnlCompany.TabIndex = 0;
             // 
+            // lblErrorCompany
+            // 
+            this.lblErrorCompany.AutoSize = true;
+            this.lblErrorCompany.BackColor = System.Drawing.SystemColors.Control;
+            this.lblErrorCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorCompany.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorCompany.Location = new System.Drawing.Point(29, 315);
+            this.lblErrorCompany.Name = "lblErrorCompany";
+            this.lblErrorCompany.Size = new System.Drawing.Size(0, 17);
+            this.lblErrorCompany.TabIndex = 21;
+            // 
             // btDeleteContainers
             // 
-            this.btDeleteContainers.Location = new System.Drawing.Point(25, 220);
+            this.btDeleteContainers.Location = new System.Drawing.Point(25, 182);
             this.btDeleteContainers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btDeleteContainers.Name = "btDeleteContainers";
             this.btDeleteContainers.Size = new System.Drawing.Size(115, 49);
@@ -152,19 +163,9 @@
             this.lblNewCompany.TabIndex = 4;
             this.lblNewCompany.Text = "Nieuw bedrijf";
             // 
-            // tbSearch
-            // 
-            this.tbSearch.Location = new System.Drawing.Point(25, 48);
-            this.tbSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(204, 22);
-            this.tbSearch.TabIndex = 3;
-            this.tbSearch.Text = "Zoeken..";
-            this.tbSearch.Enter += new System.EventHandler(this.TextBox_Enter);
-            // 
             // btSelectCompany
             // 
-            this.btSelectCompany.Location = new System.Drawing.Point(145, 220);
+            this.btSelectCompany.Location = new System.Drawing.Point(145, 182);
             this.btSelectCompany.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btSelectCompany.Name = "btSelectCompany";
             this.btSelectCompany.Size = new System.Drawing.Size(85, 49);
@@ -177,7 +178,7 @@
             // 
             this.listBCompany.FormattingEnabled = true;
             this.listBCompany.ItemHeight = 16;
-            this.listBCompany.Location = new System.Drawing.Point(25, 82);
+            this.listBCompany.Location = new System.Drawing.Point(25, 44);
             this.listBCompany.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBCompany.Name = "listBCompany";
             this.listBCompany.Size = new System.Drawing.Size(204, 132);
@@ -224,7 +225,7 @@
             // lblWeight
             // 
             this.lblWeight.AutoSize = true;
-            this.lblWeight.Location = new System.Drawing.Point(23, 187);
+            this.lblWeight.Location = new System.Drawing.Point(22, 215);
             this.lblWeight.Name = "lblWeight";
             this.lblWeight.Size = new System.Drawing.Size(58, 17);
             this.lblWeight.TabIndex = 13;
@@ -251,7 +252,7 @@
             // 
             // NUPWeight
             // 
-            this.NUPWeight.Location = new System.Drawing.Point(115, 187);
+            this.NUPWeight.Location = new System.Drawing.Point(114, 215);
             this.NUPWeight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NUPWeight.Maximum = new decimal(new int[] {
             26000,
@@ -264,7 +265,7 @@
             // 
             // btAddContainer
             // 
-            this.btAddContainer.Location = new System.Drawing.Point(204, 228);
+            this.btAddContainer.Location = new System.Drawing.Point(204, 260);
             this.btAddContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btAddContainer.Name = "btAddContainer";
             this.btAddContainer.Size = new System.Drawing.Size(111, 27);
@@ -302,22 +303,31 @@
             this.lbError.Size = new System.Drawing.Size(0, 17);
             this.lbError.TabIndex = 20;
             // 
-            // lblErrorCompany
+            // cbDestination
             // 
-            this.lblErrorCompany.AutoSize = true;
-            this.lblErrorCompany.BackColor = System.Drawing.SystemColors.Control;
-            this.lblErrorCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorCompany.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorCompany.Location = new System.Drawing.Point(29, 315);
-            this.lblErrorCompany.Name = "lblErrorCompany";
-            this.lblErrorCompany.Size = new System.Drawing.Size(0, 17);
-            this.lblErrorCompany.TabIndex = 21;
+            this.cbDestination.FormattingEnabled = true;
+            this.cbDestination.Location = new System.Drawing.Point(115, 178);
+            this.cbDestination.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbDestination.Name = "cbDestination";
+            this.cbDestination.Size = new System.Drawing.Size(200, 24);
+            this.cbDestination.TabIndex = 22;
+            // 
+            // lbDestination
+            // 
+            this.lbDestination.AutoSize = true;
+            this.lbDestination.Location = new System.Drawing.Point(23, 182);
+            this.lbDestination.Name = "lbDestination";
+            this.lbDestination.Size = new System.Drawing.Size(85, 17);
+            this.lbDestination.TabIndex = 21;
+            this.lbDestination.Text = "Bestemming";
             // 
             // containerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 491);
+            this.Controls.Add(this.cbDestination);
+            this.Controls.Add(this.lbDestination);
             this.Controls.Add(this.lbError);
             this.Controls.Add(this.lblCompanySelected);
             this.Controls.Add(this.lblComanyLabel);
@@ -354,7 +364,6 @@
         private System.Windows.Forms.TextBox tbContactPerson;
         private System.Windows.Forms.TextBox tbCompanyName;
         private System.Windows.Forms.Label lblNewCompany;
-        private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.Button btSelectCompany;
         private System.Windows.Forms.ListBox listBCompany;
         private System.Windows.Forms.Label lblCompany;
@@ -371,6 +380,8 @@
         private System.Windows.Forms.Button btDeleteContainers;
         private System.Windows.Forms.Label lbError;
         private System.Windows.Forms.Label lblErrorCompany;
+        private System.Windows.Forms.ComboBox cbDestination;
+        private System.Windows.Forms.Label lbDestination;
 
     }
 }

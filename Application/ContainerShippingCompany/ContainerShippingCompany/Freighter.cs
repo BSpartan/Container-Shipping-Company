@@ -16,8 +16,10 @@ namespace ContainerShippingCompany
         public int containersEachRow;
         public int powerSupply;
 
+        //constr
         public Freighter() { }
 
+        //contr
         public Freighter(int id, string shiptype, int maxheight, int containerrows, int containerseachrow, int powersupply) 
         {
             this.id = id;
@@ -28,6 +30,7 @@ namespace ContainerShippingCompany
             this.powerSupply = powersupply;
         }
 
+        //Return all freighters in a list
         public static List<Freighter> GetAll()
         {
             List<Freighter> freighters = new List<Freighter>();
@@ -55,8 +58,14 @@ namespace ContainerShippingCompany
                     freighters.Add(new Freighter(id, type, maxheight, containerrows, containerseachrow, powersupply));
                 }
             }
+            catch (Exception ex)
+            {
+                //If database error return unsuccesfull
+                return null;
+            }
             finally
             {
+                //Always close connection
                 db.CloseConnection();
             }
 

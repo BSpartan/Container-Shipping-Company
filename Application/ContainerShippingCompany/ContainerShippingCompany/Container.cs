@@ -9,11 +9,15 @@ namespace ContainerShippingCompany
 {
     public class Container
     {
+        //Database class
         private Database db = new Database();
+
+        //Class propperties
         public int id { get; set; }
         public int weight { get; set; }
         public Costumer costumer;
         public ContainerType containerType;
+        public Destination destination;
         public int positionX;
         public int positionY;
         public int positionZ;
@@ -21,8 +25,10 @@ namespace ContainerShippingCompany
         //for future use
         string gpscode;
 
+        //Contr
         public Container() { }
 
+        //Constr
         public Container(int id, int weight, ContainerType containertype, Costumer costumer)
         {
             this.id = id;
@@ -48,36 +54,42 @@ namespace ContainerShippingCompany
             }
             catch (Exception ex)
             {
+                //If database error return unsuccesfull
                 return false;
             }
             finally
             {
+                //Always close connection
                 db.CloseConnection();
             }
 
             return true;
         }
 
-        public bool Add(Costumer costumer,ContainerType containerType, int weight)
+        //Add a container to the database
+        public bool Add(Costumer costumer,ContainerType containerType, Destination destination, int weight)
         {
             try
             {
                 db.OpenConnection();
 
-                db.CreateCommand("INSERT INTO CONTAINERS (ADDITIONALWEIGHT, STATUS, COSTUMERS_ID, CONTAINER_TYPE_ID) VALUES (:weight, :status, :costumer_id, :container_type_id)");
+                db.CreateCommand("INSERT INTO CONTAINERS (ADDITIONALWEIGHT, STATUS, COSTUMERS_ID, CONTAINER_TYPE_ID, DESTINATIONS_ID) VALUES (:weight, :status, :costumer_id, :container_type_id, :destinations_id)");
                 db.AddParameter("weight", weight);
                 db.AddParameter("status", "Niet ingepland");
                 db.AddParameter("costumer_id", costumer.id);
                 db.AddParameter("container_type_id", containerType.id);
+                db.AddParameter("destinations_id", destination.id);
 
                 db.ExecuteCommand();
             }
             catch(Exception ex)
             {
+                //If database error return unsuccesfull
                 return false;
             }
             finally
             {
+                //Always close connection
                 db.CloseConnection();
             }
 
@@ -97,16 +109,19 @@ namespace ContainerShippingCompany
             }
             catch (Exception ex)
             {
+                //If database error return unsuccesfull
                 return false;
             }
             finally
             {
+                //Always close connection
                 db.CloseConnection();
             }
 
             return true;
         }
 
+        //Return a Container object from the given database id
         public Container GetContainerById(int id)
         {
             Container container = new Container();
@@ -122,6 +137,7 @@ namespace ContainerShippingCompany
 
                 OracleDataReader dr = db.DataReader;
 
+                //Read results
                 while (dr.Read())
                 {
                     int Cid = dr.GetValueByColumn<int>("ID");
@@ -137,6 +153,7 @@ namespace ContainerShippingCompany
 
                     OracleDataReader datar = db.DataReader;
 
+                    //FInd information of type
                     while (datar.Read())
                     {
                         int typeid = datar.GetValueByColumn<int>("ID");
@@ -147,6 +164,7 @@ namespace ContainerShippingCompany
                         containerType = new ContainerType(typeid,name,valauble,chilled);
                     }
 
+                    //Find cosutmer information
                     db.CreateCommand("SELECT * FROM COSTUMERS WHERE ID = :id");
                     db.AddParameter("id", cus_id);
 
@@ -168,8 +186,14 @@ namespace ContainerShippingCompany
                     container = new Container(id, weight, containerType, costumer);
                 }
             }
+            catch (Exception ex)
+            {
+                //If database error return unsuccesfull
+                return null;
+            }
             finally
             {
+                //Always close connection
                 db.CloseConnection();
             }
 
@@ -238,8 +262,14 @@ namespace ContainerShippingCompany
                     containers.Add(new Container(id, weight, containerType, costumer));
                 }
             }
+            catch (Exception ex)
+            {
+                //If database error return unsuccesfull
+                return null;
+            }
             finally
             {
+                //Always close connection
                 db.CloseConnection();
             }
 
@@ -247,6 +277,7 @@ namespace ContainerShippingCompany
         }
 
 
+        //Get container list of all the containers that are not implemented
         public List<Container> GetNonShippedContainerList(Costumer costumer)
         {
             List<Container> containers = new List<Container>();
@@ -264,6 +295,7 @@ namespace ContainerShippingCompany
 
                 OracleDataReader dr = db.DataReader;
 
+                //Read results
                 while (dr.Read())
                 {
                     int id = dr.GetValueByColumn<int>("ID");
@@ -291,8 +323,14 @@ namespace ContainerShippingCompany
                     containers.Add(new Container(id, weight, containerType, costumer));
                 }
             }
+            catch (Exception ex)
+            {
+                //If database error return unsuccesfull
+                return null;
+            }
             finally
             {
+                //Always close connection
                 db.CloseConnection();
             }
 
@@ -314,6 +352,7 @@ namespace ContainerShippingCompany
             }
             finally
             {
+                //Always close connection
                 db.CloseConnection();
             }
         }

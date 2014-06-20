@@ -17,10 +17,12 @@ namespace ContainerShippingCompany
         List<Freighter> freighters = new List<Freighter>();
         List<Container> availableContainers = new List<Container>();
         List<Container> placedContainers = new List<Container>();
-        List<Container> proirity = new List<Container>();
+        List<Container> toDelete = new List<Container>();
+        List<Container> prioritys = new List<Container>();
 
         Freighter freighter;
         Destination destination;
+
         public mappingForm()
         {
             InitializeComponent();
@@ -28,11 +30,13 @@ namespace ContainerShippingCompany
             FillComboBoxes();
         }
 
+        //Write default value to the rich text box
         private void WriteLegenda()
         {
             rtbLegenda.Text = "\n\n _ = lege positie \n C = normale container\n V = waardevolle container \n E = actief gekoelde container";
         }
 
+        //Fill combo boxes with database data
         private void FillComboBoxes()
         {
             cbDestination.Items.Clear();
@@ -42,18 +46,18 @@ namespace ContainerShippingCompany
             foreach (Freighter f in freighters)
             {
                 cbTypeShip.Items.Add(f.shipType);
-                //listBCompany.Items.Add(c.companyName);
             }
 
             foreach (Destination d in destinations)
             {
                 cbDestination.Items.Add(d.name);
-                //listBCompany.Items.Add(c.companyName);
             }
         }
 
+        //Generate the correct mapping
         private void btnGenerate_Click(object sender, EventArgs e)
         {
+            //Check if ship and destination is selected otherwise stop 
             if(cbTypeShip.SelectedIndex == -1 ||  cbDestination.SelectedIndex == -1)
             {
                 return;
@@ -61,17 +65,27 @@ namespace ContainerShippingCompany
 
             Container container = new Container();
 
+            //Get select freighter and destination from combobox
             freighter = freighters[cbTypeShip.SelectedIndex];
             destination = destinations[cbDestination.SelectedIndex];
+
+            //Clear incase of multiple runs
             availableContainers.Clear();
             placedContainers.Clear();
+
+            //Get all available containers
             availableContainers = container.GetNonShippedContainerList();
 
+            //Get the max amount of spots on a ship
             int totalSpots = freighter.maxHeight * freighter.containerRows * freighter.containersEachRow;
+
+            //Get the max amount of power supply on a ship
             int availablePowerSupply = freighter.powerSupply;
 
+            //Sort the containers so the chilled containers are first
             availableContainers = availableContainers.OrderByDescending(o => o.containerType.chilled).ThenBy(o => o.containerType.chilled).ThenBy(o => o.weight).ToList();
 
+            //Remember count value
             int countX = 1;
             int countY = 1;
             int countZ = 1;
@@ -80,15 +94,19 @@ namespace ContainerShippingCompany
             int z;
             bool excists;
 
+            //For every container in available containers
             foreach(Container con in availableContainers)
             {
                 countZ = 1;
 
+                //Continue to check 
                 while(true)
                 {
+                    //If all spots have been filled close 
                     if (placedContainers.Count == totalSpots)
                             break;
 
+                    //If a container is valuable make sure it can never be placed on the sides
                     if (con.containerType.valuable == 1 && countX == freighter.containerRows)
                     {
                         countX = 2;
@@ -98,13 +116,22 @@ namespace ContainerShippingCompany
                             countY = 0;
                         }
                         countY++;
+
+                        Container priority = new Container();
+                        priority.positionX = countX;
+                        priority.positionY = countY;
+                        priority.positionZ = countZ + 1;
+                        prioritys.Add(priority);
                     }
 
-                    if (con.containerType.valuable == 0 && con.containerType.valuable == 0 && proirity.Count > 0)
+                    //If there is a priority position fill that one first otherwise normal position
+                    if (con.containerType.valuable == 0 && con.containerType.valuable == 0 && prioritys.Count > 0)
                     {
-                        y = countY;
-                        x = countX;
-                        z = countZ;
+                        y = prioritys[0].positionY;
+                        x = prioritys[0].positionX;
+                        z = prioritys[0].positionZ;
+
+                        prioritys.RemoveAt(0);
                     }
                     else
                     {
@@ -113,8 +140,10 @@ namespace ContainerShippingCompany
                         z = countZ;
                     }
 
+                    //Check if the given container position is valid
                     excists = CheckIfPositionIsValid(x, y, z);
 
+                    //if its valid add the container to to the placed list
                     if (!excists)
                     {
                         con.positionX = x;
@@ -129,18 +158,25 @@ namespace ContainerShippingCompany
                     }
                     else
                     {
+                        //if container is chilled make sure its always on the front row
                         if (con.containerType.chilled == 1 && countX == freighter.containerRows)
                         {
                             countX = 0;
                             countZ++;
                         }
+                        //if the X is at its end, reset and add Y
                         else if (countX == freighter.containerRows)
                         {
-                            
+                            //if the Y is at its end, reset and add Z
                             if (countY == freighter.containersEachRow)
                             {
+                                //if the Z is at its end, break the loop
+                                if (countZ == freighter.maxHeight)
+                                {
+                                    break;
+                                }
                                 countZ++;
-                                countY = 0;
+                                countY = 0; 
                             }
                             countX = 0;
                             countY++;
@@ -150,9 +186,41 @@ namespace ContainerShippingCompany
                 }
             }
 
+            //Check all the valuables if the have a container on top of them
+            foreach (Container cont in placedContainers)
+            {
+                bool hasTopContainer = false;
+
+                if (cont.containerType.valuable == 1)
+                {
+                    foreach (Container contain in placedContainers)
+                    {
+                        if (contain.positionX == cont.positionX && contain.positionY == cont.positionY && contain.positionZ == (cont.positionZ + 1))
+                        {
+                            hasTopContainer = true;
+                        }
+                    }
+
+                    if(!hasTopContainer)
+                    {
+                        //Add to delete later so the function doesn't break
+                        toDelete.Add(cont);
+                    }
+                }
+            }
+
+            //Delete found containers
+            foreach (Container cont in toDelete)
+            {
+                placedContainers.Remove(cont);
+            }
+
             FillTextBox();
+            btnExport.Enabled = true;
+            btnMarkContainers.Enabled = true;
         }
 
+        //Fill textbox with the found vontainer spots
         private void FillTextBox()
         {
             string text = "\n\n";
@@ -188,6 +256,7 @@ namespace ContainerShippingCompany
             rtbMapping.Text = text;
         }
 
+        //Check if an position is valid 
         private bool CheckIfPositionIsValid(int x, int y, int z)
         {
             int weight = 0;
@@ -221,6 +290,7 @@ namespace ContainerShippingCompany
             }
         }
 
+        //Get type from valid container location
         private ContainerType CheckIfPositionTypeIsFilled(int x, int y, int z)
         {
             foreach (Container con in placedContainers)
@@ -234,6 +304,7 @@ namespace ContainerShippingCompany
             return null;
         }
 
+        //Export containers to given textfile
         private void btnExport_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
@@ -274,6 +345,7 @@ namespace ContainerShippingCompany
             }
         }
 
+        //Mark al found containers in the database to be transported
         private void btnMarkContainers_Click(object sender, EventArgs e)
         {
             foreach(Container container in placedContainers)

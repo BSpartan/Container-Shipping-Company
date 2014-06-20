@@ -131,6 +131,7 @@
             // 
             // btnMarkContainers
             // 
+            this.btnMarkContainers.Enabled = false;
             this.btnMarkContainers.Location = new System.Drawing.Point(18, 287);
             this.btnMarkContainers.Name = "btnMarkContainers";
             this.btnMarkContainers.Size = new System.Drawing.Size(249, 27);
@@ -141,6 +142,7 @@
             // 
             // btnExport
             // 
+            this.btnExport.Enabled = false;
             this.btnExport.Location = new System.Drawing.Point(18, 254);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(249, 27);

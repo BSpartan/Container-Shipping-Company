@@ -22,6 +22,7 @@ namespace ContainerShippingCompany
             this.land = land;
         }
 
+        //Return all destinations in a list
         public static List<Destination> GetAll()
         {
             List<Destination> destinations = new List<Destination>();
@@ -47,8 +48,14 @@ namespace ContainerShippingCompany
                     destinations.Add(new Destination(id, name, land));
                 }
             }
+            catch (Exception ex)
+            {
+                //If database error return unsuccesfull
+                return null;
+            }
             finally
             {
+                //Always close connection
                 db.CloseConnection();
             }
 

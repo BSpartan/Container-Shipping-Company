@@ -21,6 +21,7 @@ namespace ContainerShippingCompany
             InitializeComponent();
         }
 
+        //Constr
         public deleteContainerForm(Costumer costumer)
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace ContainerShippingCompany
             
         }
 
+        //Bind data to datagridview
         private void BindDataGrid()
         {
             containers = container.GetNonShippedContainerList(costumer);

@@ -9,13 +9,16 @@ namespace ContainerShippingCompany
 {
     public class ContainerType
     {
+        //Propperties
         public int id;
         public string name;
         public int valuable;
         public int chilled;
 
+        //Contr
         public ContainerType() { }
         
+        //Contr
         public ContainerType(int id, string name, int valuable, int chilled)
         {
             this.id = id;
@@ -24,6 +27,7 @@ namespace ContainerShippingCompany
             this.chilled = chilled;
         }
 
+        //Get all container types from the database and return in a list
         public static List<ContainerType> GetAll()
         {
             List<ContainerType> containerTypes = new List<ContainerType>();
@@ -49,8 +53,14 @@ namespace ContainerShippingCompany
                     containerTypes.Add(new ContainerType(id, name, valuable, chilled));
                 }
             }
+            catch (Exception ex)
+            {
+                //If database error return unsuccesfull
+                return null;
+            }
             finally
             {
+                //Always close connection
                 db.CloseConnection();
             }
 
