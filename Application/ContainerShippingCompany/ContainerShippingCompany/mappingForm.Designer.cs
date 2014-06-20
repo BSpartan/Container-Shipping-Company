@@ -70,6 +70,7 @@
             this.btnGenerate.TabIndex = 6;
             this.btnGenerate.Text = "Indeling genereren";
             this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
             // cbDestination
             // 
@@ -136,6 +137,7 @@
             this.btnMarkContainers.TabIndex = 8;
             this.btnMarkContainers.Text = "Markeer containers als ingepland";
             this.btnMarkContainers.UseVisualStyleBackColor = true;
+            this.btnMarkContainers.Click += new System.EventHandler(this.btnMarkContainers_Click);
             // 
             // btnExport
             // 
@@ -145,6 +147,7 @@
             this.btnExport.TabIndex = 7;
             this.btnExport.Text = "Indeling exporteren";
             this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // rtbLegenda
             // 
